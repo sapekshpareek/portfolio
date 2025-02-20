@@ -9,7 +9,7 @@ export const grey = {
   200: '#F4F6F8',
   300: '#DFE3E8',
   400: '#C4CDD5',
-  500: '#919EAB',
+  500: '#848992',
   600: '#637381',
   700: '#454F5B',
   800: '#212B36',
@@ -28,16 +28,16 @@ export const primary = {
 export const secondary = {
   lighter: '#EFD6FF',
   light: '#C684FF',
-  main: '#8E33FF',
+  main: '#5e3bee',
   dark: '#5119B7',
-  darker: '#27097A',
+  darker: '#1c1e53',
   contrastText: '#FFFFFF',
 };
 
 export const info = {
   lighter: '#CAFDF5',
   light: '#61F3F3',
-  main: '#00B8D9',
+  main: '#e62872',
   dark: '#006C9C',
   darker: '#003768',
   contrastText: '#FFFFFF',
@@ -47,7 +47,7 @@ export const success = {
   lighter: '#D3FCD2',
   light: '#77ED8B',
   main: '#22C55E',
-  dark: '#118D57',
+  dark: '#006b6a',
   darker: '#065E49',
   contrastText: '#ffffff',
 };
@@ -105,13 +105,13 @@ export function palette(mode) {
     ...base,
     mode: 'light',
     text: {
-      primary: grey[800],
-      secondary: grey[600],
+      primary: '#000000', // grey[800],
+      secondary: '#1c1e53', // grey[600],
       disabled: grey[500],
     },
     background: {
       paper: '#FFFFFF',
-      default: '#FFFFFF',
+      default: '#f5fcff',
       neutral: grey[200],
     },
     action: {
