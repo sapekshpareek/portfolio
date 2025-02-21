@@ -1,10 +1,17 @@
 // src/components/Navbar.js
-"use client"; // ensure client-side for hooks
+"use client";
 
-import { Box, Button, Typography, useTheme } from "@mui/material"; // import useTheme!
+import {
+  Box,
+  Button,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 export default function Navbar({ toggleColorMode, mode }) {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // small screens
 
   return (
     <Box
@@ -12,24 +19,27 @@ export default function Navbar({ toggleColorMode, mode }) {
         background: theme.palette.background.paper,
         display: "flex",
         justifyContent: "space-between",
-        width: "100vw",
-        // p: 2,
-        pt: 2,
-        pb: 2,
-        pr:10,
-        pl: 10,
         alignItems: "center",
+        width: "100%",
+        px: isMobile ? 2 : 10,
+        py: 2,
+        boxShadow: "0px 4px 60px rgba(0, 0, 0, 0.1)",  
+        zIndex: 10,
+        position: "relative",
       }}
     >
       <Box>
-        <Typography sx={{ color: theme.palette.text.primary }}>
-           Logo
+        <Typography sx={{ color: theme.palette.text.primary, fontWeight: 600 }}>
+          Logo
         </Typography>
       </Box>
-      <Box sx={{ display: "flex", gap: 6 }}>
-        <Typography sx={{ color: theme.palette.text.primary }}>
-          Home
-        </Typography>
+      <Box
+        sx={{
+          display: isMobile ? "none" : "flex",
+          gap: 6,
+        }}
+      >
+        <Typography sx={{ color: theme.palette.text.primary }}>Home</Typography>
         <Typography sx={{ color: theme.palette.text.primary }}>
           About
         </Typography>
@@ -37,10 +47,20 @@ export default function Navbar({ toggleColorMode, mode }) {
           Contact
         </Typography>
       </Box>
-      <Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         <Button
+          variant="outlined"
           onClick={toggleColorMode}
-          sx={{ color: theme.palette.text.primary }}
+          sx={{
+            color: theme.palette.secondary.main,
+            borderColor: theme.palette.secondary.main,
+          }}
         >
           {mode === "dark" ? "Light Mode" : "Dark Mode"}
         </Button>
