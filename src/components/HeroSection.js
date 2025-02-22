@@ -9,23 +9,60 @@ export default function HeroSection() {
   return (
     <Box
       sx={{
-        background: theme.palette.background.default,
+        backgroundColor: theme.palette.background.default,
         width: "100%",
-        height: "90vh",
+        minHeight: "92vh",
         px: isMobile ? 2 : 10,
-        py: 4,
+        // py: 4,
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
-        justifyContent: "space-around",
         alignItems: "center",
+        justifyContent: isMobile ? "space-around" : "",
+        // gap: 6,
       }}
     >
-      <Box>
-        <Typography>Hey, I am Sapeksh</Typography>
-        <Typography>I create website for your business and brands!</Typography>
-        <Typography>lorem</Typography>
+      {/* Left Text Section */}
+      <Box sx={{ width: isMobile ? "100%" : "45%" }}>
+        <Typography
+          variant="body1"
+          sx={{ color: theme.palette.text.headings, mb: 1 }}
+        >
+          Hey, I am Sapeksh
+        </Typography>
+
+        <Typography
+          variant={isMobile ? "h4" : "h3"}
+          fontWeight={700}
+          sx={{ color: theme.palette.text.headings, mb: 2 }}
+        >
+          I create{" "}
+          <Box component="span" sx={{ color: theme.palette.secondary.main }}>
+            websites
+          </Box>{" "}
+          for your business and brands!
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{ color: theme.palette.text.secondary }}
+        >
+          Helping brands grow online through clean design and powerful tech.
+        </Typography>
       </Box>
-      <Box>Hero Section 2</Box>
+
+      {/* Right Visual Section */}
+      <Box
+        sx={{
+          width: isMobile ? "100%" : "55%",
+          textAlign: "center",
+        }}
+      >
+        <img
+          src="/Portfolio Website.png"
+          alt="Hero Image"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
     </Box>
   );
 }

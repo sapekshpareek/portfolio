@@ -107,6 +107,7 @@ export function palette(mode) {
     text: {
       primary: '#000000', // grey[800],
       secondary: '#1c1e53', // grey[600],
+      headings: '#282938',
       disabled: grey[500],
     },
     background: {
