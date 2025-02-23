@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 export default function HeroSection() {
   const theme = useTheme();
@@ -22,16 +22,17 @@ export default function HeroSection() {
       }}
     >
       {/* Left Text Section */}
-      <Box sx={{ width: isMobile ? "100%" : "45%" }}>
+      <Box sx={{ width: isMobile ? "100%" : "50%" }}>
         <Typography
-          variant="body1"
+          variant="h6"
+          fontWeight={600}
           sx={{ color: theme.palette.text.headings, mb: 1 }}
         >
           Hey, I am Sapeksh
         </Typography>
 
         <Typography
-          variant={isMobile ? "h4" : "h3"}
+          variant={isMobile ? "h3" : "h2"}
           fontWeight={700}
           sx={{ color: theme.palette.text.headings, mb: 2 }}
         >
@@ -39,21 +40,29 @@ export default function HeroSection() {
           <Box component="span" sx={{ color: theme.palette.secondary.main }}>
             websites
           </Box>{" "}
-          for your business and brands!
+          for your businesses!
         </Typography>
 
         <Typography
-          variant="body1"
-          sx={{ color: theme.palette.text.secondary }}
+          variant="h6"
+          fontWeight={500}
+          sx={{ color: theme.palette.text.secondary, mb: 4 }}
         >
           Helping brands grow online through clean design and powerful tech.
         </Typography>
+        <Button
+          variant="contained"
+          sx={{
+            p:2,
+            background: theme.palette.secondary.main,
+          }}>
+            <Typography variant="button">Get In Touch</Typography></Button>
       </Box>
 
       {/* Right Visual Section */}
       <Box
         sx={{
-          width: isMobile ? "100%" : "55%",
+          width: isMobile ? "100%" : "50%",
           textAlign: "center",
         }}
       >

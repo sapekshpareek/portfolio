@@ -1,6 +1,9 @@
 "use client";
+import AboutMe from "@/components/AboutMe";
 import HeroSection from "@/components/HeroSection";
+import MyExperience from "@/components/MyExperiences";
 import MyServices from "@/components/MyServices";
+import Projects from "@/components/Projects";
 import { Box, useTheme } from "@mui/material";
 
 export default function Home() {
@@ -17,6 +20,9 @@ export default function Home() {
       >
         <HeroSection />
         <MyServices />
+        <AboutMe />
+        <Projects />  
+        <MyExperience />
       </Box>
     // </Container>
   );
