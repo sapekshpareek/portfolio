@@ -1,5 +1,7 @@
 "use client";
 import AboutMe from "@/components/AboutMe";
+import AppointmentSection from "@/components/AppointmentSection";
+import ClientFeedback from "@/components/ClientFeedback";
 import HeroSection from "@/components/HeroSection";
 import MyExperience from "@/components/MyExperiences";
 import MyServices from "@/components/MyServices";
@@ -23,6 +25,8 @@ export default function Home() {
         <AboutMe />
         <Projects />  
         <MyExperience />
+        <ClientFeedback />
+        <AppointmentSection />
       </Box>
     // </Container>
   );

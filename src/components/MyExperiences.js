@@ -27,6 +27,7 @@ export default function MyExperience() {
 
   return (
     <Box
+    id="myexperiences"
       sx={{
         background: theme.palette.background.paper,
         width: "100%",

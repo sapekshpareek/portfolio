@@ -7,7 +7,7 @@ export default function HeroSection() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box
+    <Box id="home"
       sx={{
         backgroundColor: theme.palette.background.default,
         width: "100%",
@@ -51,12 +51,14 @@ export default function HeroSection() {
           Helping brands grow online through clean design and powerful tech.
         </Typography>
         <Button
+          // component={Link}
+          href="/appointment"
           variant="contained"
           sx={{
             p:2,
             background: theme.palette.secondary.main,
           }}>
-            <Typography variant="button">Get In Touch</Typography></Button>
+            <Typography variant="button">Book an Appointment</Typography></Button>
       </Box>
 
       {/* Right Visual Section */}

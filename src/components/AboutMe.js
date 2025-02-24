@@ -1,10 +1,10 @@
 "use client";
 
 import {
-    Box,
-    Typography,
-    useMediaQuery,
-    useTheme
+  Box,
+  Typography,
+  useMediaQuery,
+  useTheme
 } from "@mui/material";
 
 export default function AboutMe() {
@@ -13,6 +13,7 @@ export default function AboutMe() {
 
   return (
     <Box
+    id="aboutme"
       sx={{
         backgroundColor: theme.palette.background.paper,
         width: "100%",

@@ -32,6 +32,7 @@ export default function Projects() {
 
   return (
     <Box
+    id="projects"
       sx={{
         background: theme.palette.background.paper,
         width: "100%",

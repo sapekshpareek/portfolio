@@ -7,6 +7,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import Link from "next/link";
 
 export default function Navbar({ toggleColorMode, mode }) {
   const theme = useTheme();
@@ -29,20 +30,33 @@ export default function Navbar({ toggleColorMode, mode }) {
       }}
     >
       {/* Logo on left */}
-      <Typography
-        variant="h6"
-        fontWeight={700}
-        color={theme.palette.text.primary}
-      >
-        Logo
-      </Typography>
+      <Box sx={{maxHeight: '50px', display:"flex", justifyContent:"center", alignItems: "flex-start"}}>
+        <Link href="/">
+          <img src={"/logo.png"} alt="Logo" width={150} height={"auto"} />
+        </Link>
+      </Box>
 
       {/* Menu links - hidden on mobile */}
       {!isMobile && (
         <Box sx={{ display: "flex", gap: 6 }}>
-          <Typography sx={{ color: theme.palette.text.primary }}>Home</Typography>
-          <Typography sx={{ color: theme.palette.text.primary }}>About</Typography>
-          <Typography sx={{ color: theme.palette.text.primary }}>Contact</Typography>
+          <Typography component="a" href="#home" sx={{ cursor: "pointer", textDecoration: "none", color: theme.palette.text.headings }}>
+            Home
+          </Typography>
+          <Typography component="a" href="#myservices" sx={{ cursor: "pointer", textDecoration: "none", color: theme.palette.text.headings }}>
+            My Services
+          </Typography>
+          <Typography component="a" href="#aboutme" sx={{ cursor: "pointer", textDecoration: "none", color: theme.palette.text.headings }}>
+            About Me
+          </Typography>
+          <Typography component="a" href="#projects" sx={{ cursor: "pointer", textDecoration: "none", color: theme.palette.text.headings }}>
+            My Projects
+          </Typography>
+          <Typography component="a" href="#myexperiences" sx={{ cursor: "pointer", textDecoration: "none", color: theme.palette.text.headings }}>
+            My Experience
+          </Typography>
+          <Typography component="a" href="#clientfeedback" sx={{ cursor: "pointer", textDecoration: "none", color: theme.palette.text.headings }}>
+            Client Feedback
+          </Typography>
         </Box>
       )}
 
