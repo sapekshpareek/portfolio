@@ -37,7 +37,7 @@ export default function AboutMe() {
         }}
       >
         <img
-          src="/Portfolio Website.png"
+          src="/About.png"
           alt="Hero Image"
           style={{ width: "100%", height: "auto" }}
         />
