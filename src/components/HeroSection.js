@@ -69,7 +69,7 @@ export default function HeroSection() {
         }}
       >
         <img
-          src="/Portfolio Website.png"
+          src="/Hero.png"
           alt="Hero Image"
           style={{ width: "100%", height: "auto" }}
         />
