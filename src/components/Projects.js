@@ -15,18 +15,18 @@ export default function Projects() {
       description: "Chronicle is a modern news web app offering a sleek, clean UI with dark and light themes. Powered by three APIs: NewsAPI, TheNewsAPI, and GNews API, it provides up-to-date news with seamless navigation. Users can select their preferred API and enjoy personalized news dashboards optimized for both mobile and desktop devices.",
     },
     {
-      imgUrl: './Portfolio Website.png',
-      liveUrl: 'https://sapekshpareek.vercel.app/',
-      githubUrl: 'https://github.com/sapekshpareek/Portfolio-Website',
-      title: "Mobile App Development",
-      description: "Cross-platform mobile applications for iOS and Android.",
+      imgUrl: './wanderly.png',
+      liveUrl: 'https://wanderly.onrender.com/listings',
+      githubUrl: 'https://github.com/sapekshpareek/Wanderly',
+      title: "Wanderly",
+      description: "Wanderly is a full-featured accommodation booking platform inspired by Airbnb, offering a clean and responsive UI. Built with the MERN stack, it allows users to explore listings, search by filters, and book stays with ease. Designed for performance and accessibility across both mobile and desktop devices.",
     },
     {
-      imgUrl: './Portfolio Website.png',
-      liveUrl: 'https://sapekshpareek.vercel.app/',
-      githubUrl: 'https://github.com/sapekshpareek/Portfolio-Website',
-      title: "UI/UX Design",
-      description: "Clean, user-friendly designs focused on user experience.",
+      imgUrl: './python.png',
+      liveUrl: '#',
+      githubUrl: 'https://github.com/sapekshpareek/EncryptEco',
+      title: "Encrypt Eco",
+      description: "EncryptEco optimizes AES encryption for better storage efficiency. By segmenting data, reducing encryption rounds, dynamically sizing blocks, and applying compression, it achieves up to 45% storage savings—ideal for large-scale or storage-limited applications, without compromising AES-level security.",
     },
   ];
 
