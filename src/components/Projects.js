@@ -23,7 +23,7 @@ export default function Projects() {
     },
     {
       imgUrl: './python.png',
-      liveUrl: '#',
+      // liveUrl: '#',
       githubUrl: 'https://github.com/sapekshpareek/EncryptEco',
       title: "Encrypt Eco",
       description: "EncryptEco optimizes AES encryption for better storage efficiency. By segmenting data, reducing encryption rounds, dynamically sizing blocks, and applying compression, it achieves up to 45% storage savings—ideal for large-scale or storage-limited applications, without compromising AES-level security.",

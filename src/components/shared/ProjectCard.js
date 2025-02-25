@@ -13,7 +13,6 @@ export default function ProjectCard({ imgUrl, title, description, liveUrl, githu
         boxShadow: theme.shadows[3],
         textAlign: "center",
         maxWidth: 360,
-        // mx: "auto",
         transition: "transform 0.3s ease",
         "&:hover": {
           transform: "translateY(-5px)",
@@ -21,41 +20,66 @@ export default function ProjectCard({ imgUrl, title, description, liveUrl, githu
         },
       }}
     >
-      {/* <Icon sx={{ fontSize: 50, color: theme.palette.primary.main, mb: 2 }} /> */}
-      <Box sx={{ mb: 4 }}>
-        <Box sx={{ borderRadius: 2, overflow: "hidden" }}>
-          <img
-            src={imgUrl}
-            alt={title}
-            style={{ maxWidth: "100%", height: "auto" }}
-            // mb={4}
-          />
-        </Box>
-        <Typography variant="h5" fontWeight={600} gutterBottom mb={3} mt={2} color={theme.palette.text.headings}>
-          {title}
-        </Typography>
-        <Typography variant="subtitle2" color={theme.palette.text.secondary} textAlign={"justify"}>
-          {description}
-        </Typography>
-      </Box>
+      {/* Image with full border radius */}
+      <Box
+        component="img"
+        src={imgUrl}
+        alt={title}
+        sx={{
+          width: "100%",
+          height: "auto",
+          borderRadius: 2, // Applies full border radius
+          objectFit: "cover",
+        }}
+      />
+
+      <Typography
+        variant="h5"
+        fontWeight={600}
+        mt={2}
+        mb={3}
+        color={theme.palette.text.headings}
+      >
+        {title}
+      </Typography>
+
+      <Typography
+        variant="subtitle2"
+        color={theme.palette.text.secondary}
+        textAlign={"justify"}
+        mb={3}
+      >
+        {description}
+      </Typography>
+
+      {/* Buttons */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Button
           color="secondary"
           variant="outlined"
+          disabled={!liveUrl}
+          href={liveUrl || "#"}
+          target="_blank"
           sx={{
             color: theme.palette.secondary.main,
             borderColor: theme.palette.secondary.main,
           }}
-          href={liveUrl} target="_blank"
         >
           Live Preview
         </Button>
-        <Button variant="outlined" color="black"
-        sx={{
-          color: theme.palette.text.secondary,
-          borderColor: theme.palette.text.secondary,
-        }}
-        href={githubUrl} target="_blank">Github</Button>
+        <Button
+          variant="outlined"
+          color="black"
+          disabled={!githubUrl}
+          href={githubUrl || "#"}
+          target="_blank"
+          sx={{
+            color: theme.palette.text.secondary,
+            borderColor: theme.palette.text.secondary,
+          }}
+        >
+          Github
+        </Button>
       </Box>
     </Box>
   );
